@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for Winrr.ai
+				winrr: {
+					primary: "#4361EE",
+					secondary: "#7209B7",
+					accent: "#4CC9F0",
+					light: "#F8FAFC",
+					dark: "#1E293B",
 				}
 			},
 			borderRadius: {
@@ -84,11 +93,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' },
+				},
+				'gradient-x': {
+					'0%, 100%': {
+						'background-size': '200% 200%',
+						'background-position': 'left center'
+					},
+					'50%': {
+						'background-size': '200% 200%',
+						'background-position': 'right center'
+					}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: 1 },
+					'50%': { opacity: 0.8 }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'gradient-x': 'gradient-x 15s ease infinite',
+				'pulse-slow': 'pulse-slow 3s infinite'
+			},
+			backgroundImage: {
+				'mesh-gradient': 'linear-gradient(135deg, rgba(67, 97, 238, 0.05) 0%, rgba(114, 9, 183, 0.1) 100%)',
+				'gradient-primary': 'linear-gradient(90deg, #4361EE 0%, #7209B7 100%)',
 			}
 		}
 	},
